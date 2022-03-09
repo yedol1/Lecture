@@ -99,3 +99,15 @@ z-index 값이 클수록 먼저보임
 /* 
 ### animation 단축 프로퍼티
 animation: name duration timing-function delay iteration-count direction fill-mode play-state */ 
+
+css float
+
+float:left - 왼쪽 수평정렬
+float:right - 오른쪽으로 수평정렬
+
+이는 높이를 잘 인지를 못하여 겹치는 현상 발생 -> 이러한 현상을 clear 를 사용하여 해결 
+
+float 특성
+- display 가 flex 로 설정이 되어있지 않는다면 기본적으로 block 특성으로 변경
+- 요소의 크기만큼 width 가 설정되어, display를 마치 inline-block 으로 선언해준것과 동일하게 동작
+
