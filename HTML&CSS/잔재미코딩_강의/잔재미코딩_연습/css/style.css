@@ -1,9 +1,13 @@
+/* 컬러 파레트
+보 #320b80 #673ab0 #9367e3 
+회 #bec3e2 #8d92b0 */
 * {
   box-sizing: border-box;
 }
 body {
   margin: 0 auto;
-  color: black;
+  color: #1c1c1d;
+  background-color: #ecedf3;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
 a {
@@ -11,19 +15,19 @@ a {
 }
 a:link {
   text-decoration: none;
-  color: rgb(163, 105, 163);
+  color: #320b80;
 }
 a:visited {
   text-decoration: none;
-  color: rgb(163, 105, 163);
+  color: #320b80;
 }
 a:active {
   text-decoration: none;
-  color: purple;
+  color: #673ab0;
 }
 a:hover {
   text-decoration: none;
-  color: purple;
+  color: #673ab0;
 }
 
 .inner {
@@ -35,7 +39,7 @@ a:hover {
 header {
   width: 100%;
   height: 60px;
-  background-color: #fff;
+  background-color: #ecedf3;
   position: fixed;
   top: 0;
   left: 0;
@@ -53,7 +57,7 @@ header {
   font-size: 1.2rem;
 }
 .head-container .head-brand a:hover {
-  color: rebeccapurple;
+  color: #673ab0;
   cursor: pointer;
 }
 .head-container.head-blog {
@@ -61,12 +65,11 @@ header {
   font-size: 1.2rem;
 }
 .head-container .head-blog a:hover {
-  color: rebeccapurple;
+  color: #673ab0;
   cursor: pointer;
 }
 section {
   width: 100%;
-  background-color: rgb(255, 255, 255);
   position: relative;
 }
 .main {
@@ -75,29 +78,29 @@ section {
   background-size: cover;
   background-position: center 10%;
   /* 배경사진을 조금위로 올릴때 */
+  background-size: 70%;
   background-repeat: no-repeat;
   z-index: 1;
 }
 .main-container {
   width: 100%;
   height: 100%;
-  background-color: rgb(59, 98, 150);
-  opacity: 0.5;
+  background-color: #320b80;
+  opacity: 0.3;
   z-index: 2;
   margin-top: 60px;
 }
 .title-container {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 100px 120px;
 }
 .title {
   font-size: 2rem;
   font-weight: bold;
-  color: rgb(255, 255, 255);
+  color: #ecedf3;
   margin-bottom: 0.8rem;
 }
 .message {
-  color: rgb(255, 255, 255);
+  color: #ecedf3;
   font-size: 0.8rem;
   font-weight: normal;
   line-height: 1.2rem;
@@ -108,15 +111,42 @@ section {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 1rem 0;
 }
 .skill {
   width: 25%;
-  background-color: rgb(236, 199, 199);
+  background-color: #9367e3;
   display: flex;
   align-items: center;
   border-radius: 9px;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1rem;
+  margin: 0rem 1rem;
+  box-shadow: 7px 7px 10px -5px #9b76df;
+  transition-duration: 0.4s;
+}
+.skill:hover {
+  transform: translate(0, -5px);
+}
+.skill-icon {
+  margin: 0 1px;
+  font-size: 2rem;
+  color: #ecedf3;
+}
+.skill-title {
   margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.skill-name {
+  font-weight: bold;
+  color: #ecedf3;
+  margin-bottom: 0.2rem;
+}
+.skill-usage {
+  font-weight: normal;
+  color: #dee0ee;
+  font-size: 0.5rem;
 }
 @media only screen and (min-width: 1200px) {
   .inner {
