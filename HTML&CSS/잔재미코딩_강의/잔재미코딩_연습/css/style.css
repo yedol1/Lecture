@@ -125,7 +125,8 @@ section {
   transition-duration: 0.4s;
 }
 .skill:hover {
-  transform: translate(0, -5px);
+  transition-timing-function: ease-in-out;
+  transform: translate(0, 5px);
 }
 .skill-icon {
   margin: 0 1px;
