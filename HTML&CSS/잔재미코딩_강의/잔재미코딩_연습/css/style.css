@@ -10,6 +10,9 @@ body {
   background-color: #ecedf3;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
+ul li {
+  list-style: none;
+}
 a {
   all: unset;
 }
@@ -126,7 +129,7 @@ section {
 }
 .skill:hover {
   transition-timing-function: ease-in-out;
-  transform: translate(0, 5px);
+  transform: translate(0, -4px);
 }
 .skill-icon {
   margin: 0 1px;
@@ -138,6 +141,9 @@ section {
   display: flex;
   flex-direction: column;
   align-content: center;
+}
+.skill-subtitile > li {
+  display: none;
 }
 .skill-name {
   font-weight: bold;
