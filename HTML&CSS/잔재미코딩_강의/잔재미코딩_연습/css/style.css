@@ -125,7 +125,7 @@ section {
   padding: 0.6rem 1rem;
   margin: 0rem 1rem;
   box-shadow: 7px 7px 10px -5px #9b76df;
-  transition-duration: 0.4s;
+  transition-duration: 0.3s;
 }
 .skill:hover {
   transition-timing-function: ease-in-out;
@@ -142,13 +142,43 @@ section {
   flex-direction: column;
   align-content: center;
 }
-.skill-subtitile > li {
+
+.skill-subtitle {
+  width: auto;
   display: none;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  border-radius: 0 0 9px 9px;
+  font-weight: normal;
+  font-size: 0.9rem;
+  background: #9367e3;
+  opacity: 70%;
+}
+.skill-container > li:hover {
+  transition-timing-function: ease-in-out 0.2s;
+  background-color: #673ab0;
+}
+.skill-container > li:hover > ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.skill-subtitle > li {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+.skill-subtitle > li:hover {
+  height: 100%;
+  width: 100%;
+  background: #9b76df;
 }
 .skill-name {
+  font-size: 1rem;
   font-weight: bold;
   color: #ecedf3;
-  margin-bottom: 0.2rem;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
 }
 .skill-usage {
   font-weight: normal;
@@ -158,5 +188,14 @@ section {
 @media only screen and (min-width: 1200px) {
   .inner {
     max-width: 1200px;
+  }
+}
+@media only screen and (max-width: 1112px) {
+  .skill-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .skill {
   }
 }
