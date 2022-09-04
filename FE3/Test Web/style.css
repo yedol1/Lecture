@@ -1,0 +1,95 @@
+/*리셋*/
+h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style-type: none;
+}
+
+h1, h2 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/*body*/
+body {
+    background-image: url(images/background.gif);
+}
+/*wrapper*/
+.wrapper {
+    background: #dddddd;
+    width: 800px;
+    margin: 0 auto;
+}
+/*header*/
+.head {
+    background-image: url(images/cover02.png);
+    text-align: center;
+    color: white;
+    padding: 80px 0;
+    height: auto;
+    background-size: cover;
+}
+.head h1 {
+    width: auto;
+    font-size: 80px;
+    font-weight: bold;
+}
+.head p {
+    border-top: 5px solid;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+.head .profile { /*head(클래스) 에 속한 profile(클래스)*/
+    border-radius: 50%;
+    width: 120px;
+    border: 5px solid white;
+}
+/*section*/
+.card {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    background-repeat: no-repeat;
+    background-position: right 30px center; /*오른쪽으로 이동 후, 끝에서 30px 띄움 , 센터 정렬 */
+    height: auto;
+}
+.card h2 { /*card(클래스) 에 속한 h2*/
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.information {
+    background-image: url(images/icon-information.png);
+}
+.skills {
+    background-image: url(images/icon-skills.png);
+}
+/*footer*/
+.footer_nav {
+    background-color: #eeeeee;
+    text-align: center;
+    padding: 20px 0;
+}
+.link {
+    padding: 10px 20px;
+    display: inline-block;
+    border-radius: 40px;
+    border: 4px solid;
+}
+.link.GitHub { /*class="link GitHub"*/
+    color: black;
+}
+.link.Facebook {
+    color: dodgerblue;
+}
+.link.Contact {
+    color: violet;
+}
