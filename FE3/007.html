@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <picture>
+        <!-- 최대>width>=960px 일 경우, a.jpg -->
+        <source srcset="sample/a.jpg" media="(min-width:960px)"> 
+        <!-- 960px>width>=620px 일 경우, a.jpg -->
+        <source srcset="sample/b.jpg" media="(min-width:620px)">
+        <!-- 620px>width 일 경우, a.jpg -->
+        <img src="sample/c.jpg" alt="귀여운 아기 팽귄들">
+    </picture>
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/orf9ailzXvI" title="[코테준비] N시간만에 끝내는 Python 코딩테스트(2018-2021년) 풀영상" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="1280" height="720" src="https://naver.com" frameborder="0" allowfullscreen></iframe>
+    <video controls poster="batman.jpeg" preload="auto" width="450" height="300">
+        <source src="https://www.youtube.com/embed/orf9ailzXvI" type="">
+        <source src="batman.ogv" type="video/ogg">
+        <source src="batman.webm" type="video/webm">
+        <track kind="subtitles" src="foo.en.vtt" srclang="ko" label="batman">
+    </video>
+    <!-- - preload : 좋은 사용자 경험을 위해 고려해 볼 수 있는 속성입니다. (기본 값은 브라우저마다 다릅니다.)
+    - none : 비디오 파일을 미리 로딩하지 않습니다. 서버가 최소한의 트래픽을 유지하며 페이지 로딩이 좀 더 빨라집니다.
+    - metadata : 비디오 파일을 미리 로딩하지 않지만 파일의 메타데이터(예를 들어서 영상의 길이)를 미리 가져오도록 합니다.
+    - auto : 비디오 파일을 미리 로딩하여 사용자가 바로 영상을 볼 수 있도록 준비합니다.
+    - poster : 영상이 로딩 중 일 때 대신해서 화면에 보여줄 이미지를 지정합니다.
+    - `<source>` : 다른 embedded 요소들과 마찬가지로 source 요소를 통해 브라우저가 지원하는 파일 포멧을 여러가지 지정할 수 있습니다.
+    - `<track>` : `<audio>` 혹은 `<video>` 요소의 자식으로 자막과 같은 시간 기반 텍스트 데이터(텍스트 트랙)를 보여주고자 할 때 사용합니다.
+    - kind : 텍스트 트랙의 종류를 지정합니다. subtitles(자막), captions(설명) 등을 지정할 수 있습니다.
+    - srclang : 텍스트 트랙의 언어를 지정합니다.
+    - label : 텍스트 트랙의 제목을 정합니다. -->
+</body>
+</html>
