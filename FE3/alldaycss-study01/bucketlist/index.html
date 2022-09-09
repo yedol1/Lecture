@@ -3,17 +3,24 @@
     <head>
         <title>My Bucket Lists</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="reset.css">
     </head>
     <body>
       <div class="wrapper">
-        <header>
-          My Bucket List
+        <header class="title">
+          <div class="rec"></div>
+          <h1 class="head-text">My Bucket List</h1>
         </header>
-        Travel all around the world
-        Learn a new language
-        Try a profession in a different field
-        Achieve your ideal weight
-        Run a marathon
+        <section class="content-list">
+          <ul class="list">
+            <li>Travel all around the world</li>
+            <!-- 세부적인 스타일을 지정해 주기위해 -->
+            <li id="check">Learn a new language</li>
+            <li>Try a profession in a different field</li>
+            <li>Achieve your ideal weight</li>
+            <li>Run a marathon</li>
+          </ul>
+        </section>
       </div>
     </body>
 </html>
