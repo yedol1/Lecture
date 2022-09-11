@@ -47,11 +47,123 @@ body {
     color: white;
 }
 #app{
-    font-family: GmarketSansMedium;
     background-color: #5b2386;
     color: white;
     text-align: center;
+    display: flex;
+    /* 세로축으로 정렬 */
+    flex-direction: column;
 }
-.content_modal {
+
+/* 형제 요소가 각각 포지션이 absolute 와 relative 일 경우, flex 활용하여 중앙정렬 */
+.tit-timelaw {
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title_img {
+    width: 564px;
+    position: absolute;
+}
+.clock_img {
+    width: 265px;
+    height: 265px;
+    position: relative;
+}
+
+.img-txt {
+    height: 30px;
+    margin-bottom: 50px;
+}
+
+/* 부모의 포지션 : relative - 자식의 포지션 : absolute 일 경우, 이미지 겹치기 & 중앙 정렬 */
+.tit-explain {
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.img-quotes {
+    width: 486px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.txt-desc {
+    font-size: 17px;
+    line-height: 1.7;
+}
+.tit-desc {
+    font-family: 'GmarketSansBold';
+    font-size: 20px;
+}
+
+.cont-inp {
+    font-size: 20px;
+    margin-top: 50px;
+}
+/* 폰트 설정 해줘야함 */
+input {
+    font-family: 'GmarketSansMedium';
+    width: 200px;
+    padding: 15px 20px;
+    margin: 0 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+}
+input::placeholder {
+    color: rgb(188, 188, 188);
+}
+
+.txt-wannabe {
+    margin-bottom: 20px;
+}
+.txt-time {
+    margin-bottom: 110px;
+}
+
+button {
+    font-family: 'GmarketSansBold';
+    color: #5b2386;
+    background-color: #fcee21;
+    font-size: 20px;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 30px;
+}
+/* 부모 요소에 flex속성 부여해서, 자식 컨텐츠들 정렬 */
+.btn-align {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 54.5px;
+}
+
+#result {
     display: none;
+}
+.cont-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+.cont-footer>img {
+    width: 125px;
+    height: 25px;
+}
+.txt-footer {
+    text-align: center;
+    padding: 20px 0;
+    line-height: 1.5;
+    font-size: 10px;
+}
+.cont-modal {
+    display: none;
+
 }
