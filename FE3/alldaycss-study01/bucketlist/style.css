@@ -21,6 +21,7 @@ body {
     border-top-left-radius: 28px;
     border-top-right-radius: 28px;
     border-bottom: 4px solid #ddd;
+    position: relative;
 }
 .head-text {
     width: fit-content;
@@ -30,7 +31,7 @@ body {
 }
 .rec {
     position:absolute;
-    top: 140px;
+    top: 40px;
     width: 10px;
     height: 30px; 
     background-color: #FF1493;
