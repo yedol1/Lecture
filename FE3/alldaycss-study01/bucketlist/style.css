@@ -12,7 +12,8 @@ body {
     margin: 100px auto;
     border-radius: 28px;
 }
-
+/* 헤더 부분 */
+/* 부모의 포지션 : relative - 자식의 포지션 : absolute 일 경우, 이미지 겹치기 */
 .title {
     background-color: white;
     height: 110px;
@@ -36,7 +37,10 @@ body {
     height: 30px; 
     background-color: #FF1493;
 }
+
+/* 섹션 (리스트) 부분 */
 .content-list {
+    /* 마진병합 해결 */
     overflow: hidden;
     background-color: #efefef;
     border-bottom-left-radius: 28px;

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        div{
+            background-color: brown;
+            /* 부모요소의 컨텐츠 너비의 n% */
+            width: 50%;
+            height: 200px;
+        }
+        .one {
+            width: 200px;
+            background-color: aquamarine;
+        }
+        .two {
+            /* 부모요소에 비례, but! 부모 높이가 auto로 지정되어 있을 경우는 제외! */
+            width: 50%;
+            height: 50%;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div class="one">
+        <div class="two"></div>
+    </div>
+</body>
+</html>
