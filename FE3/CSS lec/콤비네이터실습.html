@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title></title>
+    <style>
+        /* h1의 후방에 후방에 후방의 형제 선택자의 컬러를 red로 변경 */
+        h1 + p + p + p {
+            color: red;
+        }
+        /* 'a'클래스의 후방 형제 선택자를 선택하기 때문에 'a'클래스가 적용된 Mango 와 Banana 뒤에 있는 형제요소의 백그라운드 색이 변한다. */
+        .a + li {
+            background:red;
+        }
+        /* li 의 후방에 후방 형제 선택자의 font 크기를 30px 로 변경한다. 3번째 (Banana) 까지 후방에 후방 형제가 존재하므로, 3번째 (첫번째 리스트의 후방에 후방 형제) , 4번째 (2번째 리스트의 후방에 후방 형제), 5번째(3번째 리스트의 후방에 후방 형제) 리스트는 30px이 된다.  */
+        li + li + li{
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>hello world</h1>
+    <p>hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+    <ul>
+        <li>Apple</li>
+        <li class="a">Mango</li>
+        <li class="a">Banana</li>
+        <li>Melon</li>
+        <li>Strawberry</li>
+    </ul>
+</body>
+</html>
