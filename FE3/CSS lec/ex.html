@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        ul{
+            padding:0;
+            margin:0;
+            list-style:none;
+        }
+        ul li{
+            box-sizing:border-box;
+            border:1px solid black;
+            background-color: royalblue;
+            color:#fff;
+        }
+        .container{
+            display:grid;
+            /* width:300px;
+            height:500px; */
+            grid-template-columns: repeat(3,minmax(100px,300px));
+            grid-template-rows: repeat(4,50px);
+        }
+    </style>
+</head>
+<body>
+    <ul class="container">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt eaque, esse, sequi in totam commodi dolore magnam ad consectetur aperiam enim praesentium officiis maxime iusto voluptatum sunt facilis. Magni, molestiae?</li>
+    </ul>
+</body>
+</html>

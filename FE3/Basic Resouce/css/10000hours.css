@@ -43,8 +43,14 @@ html, body {
 }
 body {
     font-family: 'GmarketSansMedium' ;
+    margin: 0 auto;
     background-color: #5b2386;
     color: white;
+    width: 800px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #app{
     background-color: #5b2386;
@@ -54,7 +60,11 @@ body {
     /* 세로축으로 정렬 */
     flex-direction: column;
 }
-
+strong {
+    font-size: 72px;
+    font-weight: bold;
+    margin: 0 12px;
+}
 /* 형제 요소가 각각 포지션이 absolute 와 relative 일 경우, flex 활용하여 중앙정렬 */
 .tit-timelaw {
     margin: 50px auto;
@@ -119,9 +129,19 @@ input::placeholder {
 }
 
 .txt-wannabe {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
     margin-bottom: 20px;
 }
 .txt-time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
     margin-bottom: 110px;
 }
 
@@ -136,15 +156,27 @@ button {
 }
 /* 부모 요소에 flex속성 부여해서, 자식 컨텐츠들 정렬 */
 .btn-align {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    margin-bottom: 54.5px;
+    position: relative;
+    margin-bottom: 148px;
+}
+/* .btn-align::after{
+    content: '';
+    display: block;
+    clear: both;
+} */
+.btn-align>img{
+    position: absolute;
+    right: 80px;
+}
+.blind{
+    display: none;
 }
 
-#result {
-    display: none;
+.btn-go{
+    margin: 0 18px;
+}
+.btn-share{
+    background-color: #fff;
 }
 .cont-footer{
     display: flex;
@@ -152,6 +184,7 @@ button {
     justify-content: center;
     align-items: center;
     padding-bottom: 50px;
+    margin-top: 130px;
 }
 .cont-footer>img {
     width: 125px;
