@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <style>
+        .txt-hide{
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+        .label-hold::before{
+            display: inline-block;
+            content: '';
+            width: 22px;
+            height: 22px;
+            background-image: url(images/icon_check_empty.png);
+            vertical-align: -5px;
+        }
+        .input-hold:checked+.label-hold::before{
+            /* content: url(images/icon_check.png); */
+            background-image: url(images/icon_check.png);
+        }
+        .input-hold:focus+.label-hold::before{
+            /* 보더 속성보다는 아웃라인이 더 적절함 */
+            outline: 2px solid #222;
+            outline-offset: 5px;
+            border-radius: 50%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="inputHold" class="input-hold txt-hide">
+    <label for="inputHold" class="label-hold">선택하세요.</label>
+</body>
+</html>
