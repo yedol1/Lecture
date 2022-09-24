@@ -1,0 +1,277 @@
+body{
+    background-color: #EAE8FE;
+}
+
+#wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 248px;
+    gap: 0 28px;
+}
+
+/* 로고 */
+.head{
+    position: absolute;
+    width: max-content;
+    top: 0;
+}
+
+.head img{
+    width: 386px;
+    height: 180px;
+}
+
+.cont-vend,.gotcha{
+    width: 360px;
+    height: fit-content;
+}
+
+
+/* 자판기UI */
+.cont-vend{
+    position: relative;
+    background-color: #fff;
+    height: fit-content;
+    padding: 31px 27px 28px 27px;
+    box-sizing: border-box;
+}
+.gotcha{
+    background-color: #EAE8FE;
+}
+
+/* 콜라 리스트 */
+.list-item{
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.list-item li{
+    position: relative;
+    width: 94px;
+    height: 130px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    padding-top: 12px;
+    box-sizing: border-box;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+}
+.list-item li.on ::before{
+    display: block;
+    position: absolute;
+    content:'';
+    width:100%;
+    height:100%;
+    border: 3px solid #6327FE;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.item-name{
+    display: block;
+    padding-top: 6px;
+    font-size: 9px;
+    line-height: 13px;
+}
+.item-price{
+    display: block;
+    width: 70px;
+    height: 22px;
+    margin-top: 6px;
+    padding: 6px 16px;
+    border-radius: 50px;
+    background: #6327FE;
+    color: #fff;
+    font-size: 12px;
+    line-height: 100%;
+    box-sizing: border-box;
+}
+
+/* 잔액 & 입급 & 획득*/
+.vend-rest, .vent-input, .vend-order{
+    display: flex;
+    width: 100%;
+    /* height: 100%; */
+    justify-content: space-between;
+    margin-top: 12px;
+}
+.gotcha .vend-order{
+    justify-content: flex-start;
+}
+/* .vend-order{
+    display: flex;
+    width: 100%;
+    margin-top: 12px;
+} */
+.gotcha .vend-order{
+    flex-direction: column;
+    align-items: center;
+    height: 475px;
+    padding: 25px 27px 26px 27px;
+    box-sizing: border-box;
+}
+.gotcha{
+    /* display: block; */
+    /* position: relative; */
+    height: 100%;
+}
+
+.cont-pocket{
+    background-color: #fff;
+    padding: 9px 0;
+}
+.rest-money, .input-money, .order-list, .pocket-money{
+    display: flex;
+    justify-content: space-between;
+    width: 66%;
+    padding: 6px 10px;
+    border-radius: 5px;
+    background: #EAE8FE;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+.input-money{
+    border: 1px solid #BDBDBD;
+    background-color: transparent;
+    font-size: 13px;
+    line-height: 19px;
+}
+.input-money::placeholder{
+    color: #BDBDBD;
+}
+.order-list{
+    height: 106px;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    border: 1px solid #BDBDBD;
+    padding: 12px 4px 12px 12px;
+    box-sizing: border-box;
+}
+.pocket-money{
+    width: auto;
+    margin: 0px 27px;
+}
+/* 스크롤 커스텀 */
+.order-list::-webkit-scrollbar{
+    width: 12px;
+}
+.order-list::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 4px solid #eeeeee;
+    border-radius: 50px;
+}
+.order-list::-webkit-scrollbar-track{
+    background-color: rgba(0,0,0,0);
+}
+
+.order-list li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+    padding: 6px 8px 7px 10px;
+    margin-bottom: 6px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.order-list li img{
+    width: 18px;
+    height: 33px;
+}
+.list-qnt{
+    display: flex;
+    float:right;
+    width:30px;
+    height:30px;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    /* vertical-align: text-bottom; */
+}
+.list-name{
+    width: 49%;
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 13px;
+}
+.order-tit{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+.gotcha-total{
+    width: 100%;
+    text-align: right;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    margin-top: 6px;
+}
+.return-money, .input-deposit, .list-get{
+    width: 31%;
+    padding: 6px 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 19px;
+}
+.list-get{
+    background-color: #6327FE;
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 19px;
+}
+
+.mt-20{
+    margin-top: 20px;
+    background: #fff;
+}
+.mt-12{
+    margin-top: 12px;
+}
+.per-100{
+    width: 100%;
+    height: 364px;
+}
+
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 765px) {
+    body{
+        background-color: #fff;
+
+    }
+    #wrapper{
+        padding-top: 78px;
+    }
+    .head img{
+        width: 166px;
+        height: 78px;
+    }
+    .gotcha .vend-order{
+        margin-top: 0px;
+    }
+    .cont-pocket{
+        padding: 0px;
+    }
+    .cont-vend{
+        padding: 18px 27px 20px 27px;
+    }
+}
