@@ -137,7 +137,7 @@ table {
 * {
     box-sizing: border-box;
 }
-
+/* 
 .txt-hide {
     position: absolute;
     clip: rect(0 0 0 0);
@@ -145,7 +145,7 @@ table {
     height: 1px;
     margin: -1px;
     overflow: hidden;
-}
+} */
 
 .clearFix::after {
     content: '';
