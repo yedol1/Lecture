@@ -57,21 +57,52 @@ body{
     height: 130px;
     border-radius: 10px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-    padding-top: 12px;
+    /* padding-top: 12px; */
     box-sizing: border-box;
-    text-align: center;
+    margin: 0 auto;
     font-style: normal;
     font-weight: 500;
+    z-index: 1;
 }
-.list-item li.on ::before{
-    display: block;
+.list-btn:hover{
+    /* display: block; */
     position: absolute;
     content:'';
     width:100%;
     height:100%;
-    border: 3px solid #6327FE;
+    outline: 3px solid #6327FE;
     border-radius: 10px;
     box-sizing: border-box;
+}
+.sold-out:hover{
+    position: absolute;
+    content:'';
+    width:100%;
+    height:100%;
+    border: transparent;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.list-item .sold-out::before{
+    display: block;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-image: url(/과제_벤딩머신/src/images/Sold-out.svg);
+    background-color: rgba(0, 0, 0, 0.8);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.list-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 .item-name{
@@ -253,7 +284,7 @@ body{
 }
 
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 765px) {
+@media only screen and (min-width:360px) and (max-width: 747px) {
     body{
         background-color: #fff;
 
@@ -275,3 +306,50 @@ body{
         padding: 18px 27px 20px 27px;
     }
 }
+@media only screen and (max-width:360px){
+    html{
+        width: 360px;
+    }
+    body{
+        background-color: #fff;
+
+    }
+    #wrapper{
+        padding-top: 78px;
+    }
+    .head img{
+        width: 166px;
+        height: 78px;
+    }
+    .gotcha .vend-order{
+        margin-top: 0px;
+    }
+    .cont-pocket{
+        padding: 0px;
+    }
+    .cont-vend{
+        padding: 18px 27px 20px 27px;
+    }
+}
+/* @media only screen and (min-width: 0px) and (max-width: 747px) {
+    body{
+        background-color: #fff;
+
+    }
+    #wrapper{
+        padding-top: 78px;
+    }
+    .head img{
+        width: 166px;
+        height: 78px;
+    }
+    .gotcha .vend-order{
+        margin-top: 0px;
+    }
+    .cont-pocket{
+        padding: 0px;
+    }
+    .cont-vend{
+        padding: 18px 27px 20px 27px;
+    }
+} */
