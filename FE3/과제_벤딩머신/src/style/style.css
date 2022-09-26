@@ -1,7 +1,9 @@
 body{
     background-color: #EAE8FE;
 }
-
+button{
+    cursor: pointer;
+}
 #wrapper{
     display: flex;
     flex-direction: row;
@@ -199,7 +201,7 @@ body{
 .order-list::-webkit-scrollbar-thumb{
     background-color: #fff;
     background-clip: padding-box;
-    border: 4px solid #eeeeee;
+    border: 4px solid transparent;
     border-radius: 50px;
 }
 .order-list::-webkit-scrollbar-track{
@@ -331,25 +333,3 @@ body{
         padding: 18px 27px 20px 27px;
     }
 }
-/* @media only screen and (min-width: 0px) and (max-width: 747px) {
-    body{
-        background-color: #fff;
-
-    }
-    #wrapper{
-        padding-top: 78px;
-    }
-    .head img{
-        width: 166px;
-        height: 78px;
-    }
-    .gotcha .vend-order{
-        margin-top: 0px;
-    }
-    .cont-pocket{
-        padding: 0px;
-    }
-    .cont-vend{
-        padding: 18px 27px 20px 27px;
-    }
-} */

@@ -1,0 +1,30 @@
+#wrapper{
+    display: flex;
+    justify-content: center;
+    width: 1440px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+.head{
+    width: 100%;
+    display: flex;
+    gap: 0;
+}
+.left-side, .right-side{
+    width: 50%;
+    background-color: #C2C1DB;
+    /* flex-basis: 720px; */
+    overflow: hidden;
+}
+.prof-img{
+    width: 100%;
+}
+.link-icon li{
+    width: 48px;
+}
+.link-icon i{
+    font-size: 48px;
+    color: #fff;
+    width: 48px;
+    height: 48px;
+}
