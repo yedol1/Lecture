@@ -1,0 +1,72 @@
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile {
+  background-image: url("./assets/user.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+
+.profile-1 {
+  background-image: url("./assets/user.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30% 50%;
+}
+
+.profile-2 {
+  background-image: url("./assets/user.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 30% 30%;
+}
+
+li:nth-child(1) .thumb {
+  background-image: url(background1.png);
+}
+
+li:nth-child(2) .thumb {
+  background-image: url(background2.png);
+}
+
+li:nth-child(3) .thumb {
+  background-image: url(background3.png);
+}
+
+li:nth-child(4) .thumb {
+  background-image: url(background4.png);
+}
+
+li:nth-child(5) .thumb {
+  background-image: url(background5.png);
+}
+
+li:nth-child(6) .thumb {
+  background-image: url(background6.png);
+}
+
+li:nth-child(7) .thumb {
+  background-image: url(background7.png);
+}
+
+li:nth-child(8) .thumb {
+  background-image: url(background8.png);
+}
+
+li:nth-child(9) .thumb {
+  background-image: url(background9.png);
+}
+
+li:nth-child(10) .thumb {
+  background-image: url(background10.png);
+}/*# sourceMappingURL=008_mixin.css.map */

@@ -9,7 +9,7 @@ html{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 1000px;
+    width: 1024px;
     height: auto;
     background-color: #DDD8D8;
     margin: 0 auto;
@@ -36,7 +36,7 @@ html{
     justify-content: center;
 }
 .left-cont{
-    margin: 0 12rem;
+    margin-left: 12rem;
 }
 .left-side h1{
     font-weight: 700;
@@ -68,7 +68,7 @@ html{
 .main-cont{
     /* width: 100%; */
     height: auto;
-    padding: 12rem 12rem 0;
+    padding: 10rem 12rem 0;
 }
 .main-cont section{
     margin-bottom: 6rem;
