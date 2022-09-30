@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <script>
+        let txt="abcdefg";
+        let txt2 = "haha\n'gogo'";
+        let txt3 = "haha \"gogo\"";
+        console.log(txt + txt);
+        // JS 에서는 index가 -1이면 Undefined
+        console.log(txt[3], txt[4]);
+        console.log(txt2);
+        console.log(txt3);
+
+        // 스트링 매서드
+        console.log(txt.length);
+        // 7개의 글자지만 index는 7-1 인 6개
+
+        // indexOf 는 정규표현식 허용 X
+        console.log(txt.indexOf("e"));
+        console.log(txt.search("e"));
+        
+        console.log(txt.indexOf("Z"));
+        console.log(txt.search("Z"));
+
+        // let regExp = /CD/;
+        // console.log(txt.search(RegExp));
+
+        let txt4 = "AbcdIoL"
+        let txt5 = "pang Ryeol LEE"
+        let txt6 = "pang Ryeol LEE pang"
+        let txt7 = "pang Ryeol LEE pang"
+        let regExp = /[A-Z]/g;
+        console.log(txt4.search(regExp));
+        console.log(txt5.search(regExp));
+
+        console.log(txt5.slice(0,6));
+        // 시작인덱스 <-> 끝인덱스-1 반환
+        console.log(txt5.substring(8,5));
+        console.log(txt5.substring(5,8));
+        // 시작인덱스 부터 길이만큼 반환
+        console.log(txt5.substr(8,5));
+        console.log(txt5.substr(5,8));
+        console.log(txt5.substr(1,20));
+        console.log(txt5.substr(20,1));
+        console.log(txt5.substr(txt5.indexOf("R"),5));
+
+        // replace("바뀔문자열","바꿀문자열")
+        console.log(txt5.replace("pang","Gwang"));
+
+        // replace 정규식 과 replaceAll 사용해보기
+        // console.log(txt6.replace(/"pang"/g,"Gwang"));
+        console.log(txt6.replace(/pang/g,"Gwang"));
+        console.log(txt7.replaceAll("pang","Gwang"));
+
+        // 대소문자 전환
+        console.log(txt5.toUpperCase());
+        console.log(txt5.toLowerCase());
+
+        // 포함하는지 아닌지 판단 T/F
+        console.log(txt5.includes("R"));
+        console.log(txt5.includes("r"));
+
+        // split
+        console.log(txt5.split(" "));
+        //trim - 앞뒤로 공백 삭제
+        console.log("               a b c       ".trim());
+        
+        //원본은 변하지 X 
+        console.log(txt5);
+    </script>
+</body>
+</html>
