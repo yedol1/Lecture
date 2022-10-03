@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_2PANG</title>
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <link rel="stylesheet" href="./dist/output.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
+</head>
+
+<body class="bg-slate-900">
+    <div class="relative h-screen flex justify-center items-center w-full">
+        <div class="origin-center absolute flex flex-col box-border w-96 h-96 bg-violet-300 rounded-full justify-center items-center shadow shadow-lg shadow-[0_0_16px_16px_rgba(173,0,255,0.25)] hover:shadow-[0_0_56px_32px_rgba(173,0,255,0.25)] animate-spin-more-slow z-50">
+            <span class="text-center text-slate-200 text-7xl">10_2PANG</span>
+            <div class="absolute flex justify-center items-center left-[100%] w-96 h-96 bg-transparent">
+                <button class="origin-center flex flex-col box-border w-64 h-64 bg-violet-300 rounded-full justify-center items-center shadow shadow-lg shadow-[0_0_16px_16px_rgba(173,0,255,0.25)] hover:shadow-[0_0_56px_32px_rgba(173,0,255,0.25)] mt-6 animate-spin-slow" type="button" data-modal-toggle="defaultModal">
+                    <span class="text-center text-slate-500 text-4xl">About Me</span>
+                </button>
+                <button class="absolute top-[95%] right-[60%] flex flex-col box-border w-64 h-64 bg-violet-300 rounded-full justify-center items-center shadow shadow-lg shadow-[0_0_16px_16px_rgba(173,0,255,0.25)] hover:shadow-[0_0_56px_32px_rgba(173,0,255,0.25)] mt-6 animate-spin-slow">
+                    <span class="text-center text-slate-500 text-4xl" type="button" data-modal-toggle="defaultModal1">Project</span>
+                </button>
+                <button class="absolute top-[104%] right-[150%] flex flex-col box-border w-64 h-64 bg-violet-300 rounded-full justify-center items-center shadow shadow-lg shadow-[0_0_16px_16px_rgba(173,0,255,0.25)] hover:shadow-[0_0_56px_32px_rgba(173,0,255,0.25)] mt-6 animate-spin-slow" type="button" data-modal-toggle="defaultModal2">
+                    <span class="text-center text-slate-500 text-4xl">Skill</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+    <div id="defaultModal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+        <div class="relative p-4 w-full max-w-3xl h-auto md:h-auto">
+            <!-- Modal content -->
+            <div class="relative bg-slate-900 rounded-lg shadow border-4 border-violet-300">
+                <!-- Modal header -->
+                <div class="flex justify-between items-start p-4 rounded-t border-violet-300">
+                    <h3 class="text-2xl font-semibold text-gray-100">
+                        About Me
+                    </h3>
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="defaultModal">
+                        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-6 space-y-6">
+                    <p class="text-base leading-relaxed text-gray-500">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sunt ducimus nesciunt repudiandae cum tenetur minima veniam autem hic, eaque adipisci similique aliquam, quasi inventore ut, sint molestiae eveniet officiis!
+                    </p>
+                    <p class="text-base leading-relaxed text-gray-500">
+                        사용자 경험을 우선시 생각하여, 보다 나은 환경으로 최적의 경험을 선사 하고자 노력하고 있는 개발자 입니다
+                    </p>
+                    <p class="text-base leading-relaxed text-gray-500">
+                        Email : yedol1@naver.com<br>
+                        Blog : https://yedol1.github.io<br>
+                        Github : https://github.com/yedol1
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+    <div id="defaultModal1" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+        <div class="relative p-4 w-full max-w-3xl h-auto md:h-auto">
+            <!-- Modal content -->
+            <div class="relative bg-slate-900 rounded-lg shadow border-4 border-violet-300">
+                <!-- Modal header -->
+                <div class="flex justify-between items-start p-4 rounded-t border-violet-300">
+                    <h3 class="text-2xl font-semibold text-gray-100">
+                        Project
+                    </h3>
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="defaultModal1">
+                        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="flex flex-wrap h-[410px] gap-8 justify-center m-3 overflow-y-scroll">
+                    <div class="p-0 space-y-6">
+                        <div class="max-w-[300px] max-h-[400px] bg-violet-300 rounded-lg border border-slate-900 shadow-md">
+                            <a href="#">
+                                <img class="rounded-t-lg" src="images/FES_Zoom_background_img.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700">1만시간의법칙</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-slate-500 h-[100px] overflow-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quaerat, velit repellat est vitae exercitationem provident aperiam illo ipsum eligendi dolore, error temporibus explicabo hic, laboriosam cupiditate deserunt voluptates blanditiis.</p>
+                                <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Github
+                                    <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-0 space-y-6">
+                        <div class="max-w-[300px] max-h-[400px] bg-violet-300 rounded-lg border border-slate-900 shadow-md">
+                            <a href="#">
+                                <img class="rounded-t-lg" src="images/FES_Zoom_background_img.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700">벤딩머신</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-slate-500 h-[100px] overflow-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quaerat, velit repellat est vitae exercitationem provident aperiam illo ipsum eligendi dolore, error temporibus explicabo hic, laboriosam cupiditate deserunt voluptates blanditiis.</p>
+                                <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Github
+                                    <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-0 space-y-6">
+                        <div class="max-w-[300px] max-h-[400px] bg-violet-300 rounded-lg border border-slate-900 shadow-md">
+                            <a href="#">
+                                <img class="rounded-t-lg" src="images/FES_Zoom_background_img.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700">감귤마켓</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-slate-500 h-[100px] overflow-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quaerat, velit repellat est vitae exercitationem provident aperiam illo ipsum eligendi dolore, error temporibus explicabo hic, laboriosam cupiditate deserunt voluptates blanditiis.</p>
+                                <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Github
+                                    <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-0 space-y-6">
+                        <div class="max-w-[300px] max-h-[400px] bg-violet-300 rounded-lg border border-slate-900 shadow-md">
+                            <a href="#">
+                                <img class="rounded-t-lg" src="images/FES_Zoom_background_img.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700">BE_평 프로젝트</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-slate-500 h-[100px] overflow-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quaerat, velit repellat est vitae exercitationem provident aperiam illo ipsum eligendi dolore, error temporibus explicabo hic, laboriosam cupiditate deserunt voluptates blanditiis.</p>
+                                <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Github
+                                    <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-0 space-y-6">
+                        <div class="max-w-[300px] max-h-[400px] bg-violet-300 rounded-lg border border-slate-900 shadow-md">
+                            <a href="#">
+                                <img class="rounded-t-lg" src="images/FES_Zoom_background_img.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700">00프로젝트</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-slate-500 h-[100px] overflow-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quaerat, velit repellat est vitae exercitationem provident aperiam illo ipsum eligendi dolore, error temporibus explicabo hic, laboriosam cupiditate deserunt voluptates blanditiis.</p>
+                                <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Github
+                                    <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-0 space-y-6">
+                        <div class="max-w-[300px] max-h-[400px] bg-violet-300 rounded-lg border border-slate-900 shadow-md">
+                            <a href="#">
+                                <img class="rounded-t-lg" src="images/FES_Zoom_background_img.png" alt="" />
+                            </a>
+                            <div class="p-5">
+                                <a href="#">
+                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-slate-700">랜딩페이지</h5>
+                                </a>
+                                <p class="mb-3 font-normal text-slate-500 h-[100px] overflow-hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure quaerat, velit repellat est vitae exercitationem provident aperiam illo ipsum eligendi dolore, error temporibus explicabo hic, laboriosam cupiditate deserunt voluptates blanditiis.</p>
+                                <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Github
+                                    <svg aria-hidden="true" class="ml-2 -mr-1 w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+    <div id="defaultModal2" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full">
+        <div class="relative p-4 w-full max-w-3xl h-auto md:h-auto">
+            <!-- Modal content -->
+            <div class="relative bg-slate-900 rounded-lg shadow border-4 border-violet-300">
+                <!-- Modal header -->
+                <div class="flex justify-between items-start p-4 rounded-t border-violet-300">
+                    <h3 class="text-2xl font-semibold text-gray-100">
+                        Skill
+                    </h3>
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-toggle="defaultModal2">
+                        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-6 space-y-6">
+                    <h4 class="text-xl leading-relaxed text-gray-200">
+                        Front-End
+                        <ol class="text-lg text-gray-500 mt-2">
+                            <li class="">- HTML, CSS, JavaScript, Bootstrap, Sass, Tailwind, React</li>
+                            <li>- Figma, Adobe XD, Sketch, Adobe Illustrator</li>
+                        </ol>
+                    </h4>
+                    <h4 class="text-xl leading-relaxed text-gray-200">
+                        ETC
+                        <ol class="text-lg text-gray-500 mt-2">
+                            <li class="">- GitHub, Git</li>
+                            <li>- VS Code, Eclipse, MySQL</li>
+                            <li>- Slack, Discord</li>
+                            <li>- AfterEfects, Maya</li>
+                        </ol>
+                    </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- <div class="absolute left-[50%] top-[0%] origin-[0px_512px] flex flex-col box-border w-64 h-64 bg-violet-300 rounded-full justify-center items-center shadow shadow-lg shadow-[0_0_16px_16px_rgba(173,0,255,0.25)] hover:shadow-[0_0_56px_32px_rgba(173,0,255,0.25)] animate-spin-more-slow">
+            <span class="text-center text-slate-200 text-7xl z-0">
+
+            </span>
+        </div> -->
+</body>
+
+</html>
