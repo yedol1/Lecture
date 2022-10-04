@@ -8,21 +8,6 @@
     </head>
     <body>
         <script>
-            // true = 1
-            // false = 0
-            // and(&&) = 곱
-            // or(||) = 합
-            // not(!) = 부정
-            console.log(true||false);
-            console.log(true||true);
-            console.log(true&&false);
-            console.log(!false);
-            console.log(!!false);
-
-            let x = 3;
-            let result = x == 4 ? 100 : 200; //x가 4일 경우는 true , 아닐경우는 false를 result값에 저장
-            // document.write(result);
-
             let newuser={
                 id:'pang',
                 pw:'gggg',
@@ -62,15 +47,26 @@
             e["a"]=50;
             console.log(e);
 
-
+            // 닉네임 정하기
             let nickname={
                 color:['푸른','붉은','검은','하얀'],
                 nature:['늑대','태양','독수리','바람'],
                 word:['눈물','환생','기상','일격','유령']
             }
-            console.log(nickname['color'].length)
-            let user_nickname = [nickname["color"][Math.floor(Math.random()*nickname['color'].length)],nickname["nature"][Math.floor(Math.random()*nickname['nature'].length)]+"의",nickname["word"][Math.floor(Math.random()*nickname['word'].length)]+"!!"]
+            // console.log(nickname['color'].length)
+            console.log(nickname.color.length)
+            let user_nickname = [nickname["color"][Math.floor(Math.random()*nickname['color'].length)],nickname["nature"][Math.floor(Math.random()*nickname['nature'].length)]+"의",nickname.word[Math.floor(Math.random()*nickname.word.length)]+"!!"]
+
             console.log(user_nickname.join(" "))
+
+            let prod={
+                name:'웃기는물건',
+                array_any:[7,9,{
+                    goal:'장난',
+                    num:'123',
+                },3.3]
+            }
+            console.log(prod.array_any[2].num);
         </script>
     </body>
 </html>
