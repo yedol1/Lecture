@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+    </head>
+    <body>
+        <script>
+            for (let i = 0 ; i<10 ; i++){
+                console.log(i)
+            }
+
+            let data1 = ['a','b','c','d','e']
+            for(let i=0;i<data1.length;i++){
+                console.log(data1[i]);
+            }
+
+            let 수학점수=[10,99,88,85,21,35]
+            let sum=0;
+
+            for(let i=0;i<수학점수.length;i++){
+                sum+=수학점수[i];
+            }
+            console.log(sum/수학점수.length)
+
+            console.log(수학점수.reduce((a,b)=>a+b,0) / 수학점수.length)
+
+            let user = [
+                {
+                    "_id": "633e5b1711926cc42d1fbb4b",
+                    "index": 0,
+                    "guid": "e6ef4abc-a6fc-4ed5-a9b0-8060240c48ab",
+                    "age": 28,
+                    "name": "Mai Montoya",
+                    "gender": "female"
+                },
+                {
+                    "_id": "633e5b1718d6c001d2f771c7",
+                    "index": 1,
+                    "guid": "9b07b16c-7a4a-4152-83cf-fb64625f52fe",
+                    "age": 22,
+                    "name": "Shelley Potts",
+                    "gender": "female"
+                },
+                {
+                    "_id": "633e5b17fecc26a897aa2283",
+                    "index": 2,
+                    "guid": "cfb29cc6-8381-4695-8c2f-0c273a9d33c2",
+                    "age": 22,
+                    "name": "Hensley Flores",
+                    "gender": "male"
+                },
+                {
+                    "_id": "633e5b17267fe16c24f00591",
+                    "index": 3,
+                    "guid": "6e189d90-0981-4086-9ee2-12242fda76d1",
+                    "age": 20,
+                    "name": "Holmes Morrow",
+                    "gender": "male"
+                },
+                {
+                    "_id": "633e5b17b30766b9c38594f5",
+                    "index": 4,
+                    "guid": "f1505113-9383-4249-bbb3-0e5f8ea634b2",
+                    "age": 25,
+                    "name": "Elisa Miller",
+                    "gender": "female"
+                }
+            ];
+            let w = 0;
+            for(let i=0;i<user.length;i++){
+                console.log(user[i]);
+                if(user[i]['gender']==='female'){
+                    w+=1;
+                }
+            }
+            console.log(w)
+            //남성의 수 를 볼 경우
+            console.log(user.length-w)
+
+            console.log(user.filter(i=> i.gender === 'female').length)
+
+            // break 는 아에 탈출 / continue 는 루프 한 바퀴 탈출
+
+            // for in 은 인덱스 혹은 키 를 뽑아낸다고 생각하면 된다.
+            let data = {
+                'one':'하나',
+                'two':'둘',
+                'three':'셋',
+                'four':'넷',
+            }
+            for ( const i in data ){
+                console.log(i);
+            }
+            
+            let data2 = [1,2,3,4];
+            for ( const i in data2 ){
+                console.log(i);
+            }
+            
+            for ( const i in data ){
+                console.log(i);
+                console.log(data[i])
+            }
+            
+            // for of 는 value 값을 뽑아낸다.
+            let data3 = [10,20,30,40];
+            for ( const i of data3 ){
+                console.log(i);
+            }
+
+            
+
+        </script>
+    </body>
+</html>
