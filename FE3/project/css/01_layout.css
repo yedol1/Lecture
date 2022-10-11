@@ -61,12 +61,19 @@ header .btn-allmenu{
     position: absolute;
     right: 0;
 }
+/* 헤더 (완) */
+
 main{
     background-color: sandybrown;
     flex-grow: 1;
     height: 200vh;
 	padding-top: 80px;
 }
+
+
+/* 메인 (완) */
+
+
 aside{
     background-color: aquamarine;
     position: fixed;
