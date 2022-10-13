@@ -6,7 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title></title>
         <style>
-            table, thead, tbody, tr, th, td{
+            table,
+            thead,
+            tbody,
+            tr,
+            th,
+            td {
                 border: solid 1px #000;
                 border-collapse: collapse;
             }
@@ -16,16 +21,14 @@
         <button onclick="renderTable(userData)">회원정보 로딩</button>
         <table style="width: 100%" id="infoTable">
             <thead>
-                <th onclick="sort('_id')" style="width:15%">id</th>
-                <th onclick="sort('index')" style="width:15%">index</th>
-                <th onclick="sort('guid')" style="width:15%">guid</th>
-                <th onclick="sort('age')" style="width:15%">age</th>
-                <th onclick="sort('name')" style="width:15%">name</th>
-                <th onclick="sort('gender')" style="width:15%">gender</th>
+                <th onclick="sort('_id')" style="width: 15%">id</th>
+                <th onclick="sort('index')" style="width: 15%">index</th>
+                <th onclick="sort('guid')" style="width: 15%">guid</th>
+                <th onclick="sort('age')" style="width: 15%">age</th>
+                <th onclick="sort('name')" style="width: 15%">name</th>
+                <th onclick="sort('gender')" style="width: 15%">gender</th>
             </thead>
-            <tbody>
-                
-            </tbody>
+            <tbody></tbody>
         </table>
         <script>
             let userData = [
@@ -89,21 +92,25 @@
 
             var click = true;
 
-            function sort(key){
+            function sort(key) {
                 if (click) {
                     click = false;
-                    let sortedData = userData.sort((a, b) => (a[key] < b[key] ? -1 : (a[key] > b[key] ? 1 : 0)));
+                    let sortedData = userData.sort((a, b) =>
+                        a[key] < b[key] ? -1 : a[key] > b[key] ? 1 : 0
+                    );
                     renderTable(sortedData);
                 } else {
                     click = true;
-                    let sortedData = userData.sort((a, b) => (a[key] > b[key] ? -1 : (a[key] < b[key] ? 1 : 0)));
+                    let sortedData = userData.sort((a, b) =>
+                        a[key] > b[key] ? -1 : a[key] < b[key] ? 1 : 0
+                    );
                     renderTable(sortedData);
                 }
             }
 
-            function renderTable(userData){
+            function renderTable(userData) {
                 // console.log(userData[0]);
-                let tablebodyData = []
+                let tablebodyData = [];
 
                 for (const user of userData) {
                     tablebodyData.push(`<tr>
@@ -115,8 +122,9 @@
                     <td>${user.gender}</td>
                 </tr>`);
                 }
-                console.log(tablebodyData.join(""))
-                document.querySelector('#infoTable > tbody').innerHTML = tablebodyData.join("");
+                console.log(tablebodyData.join(""));
+                document.querySelector("#infoTable > tbody").innerHTML =
+                    tablebodyData.join("");
             }
         </script>
     </body>
