@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <style>
+            .box {
+                width: 300px;
+                height: 300px;
+                background-color: black;
+                margin: 0 auto;
+            }
+            ul {
+                display: flex;
+                justify-content: space-around;
+            }
+            .none {
+                background-color: black;
+            }
+            .box.red {
+                background-color: red;
+            }
+            .box.yellow {
+                background-color: yellow;
+            }
+            .box.green {
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- <div id="mydiv">div</div>
+        <div id="mydiv">div</div>
+        <div id="mydiv">div</div>
+        <div id="mydiv">div</div>
+        <div id="mydiv">div</div> -->
+        점심 식단
+        <article id="container">
+            <ul>
+                <li>탕수육</li>
+                <li class="item-second">유산슬</li>
+                <li>짜장면</li>
+            </ul>
+        </article>
+
+        저녁 식단
+        <article>
+            <ul>
+                <li>된장국</li>
+                <li class="item-second">김치찌게</li>
+                <li>해장국</li>
+            </ul>
+        </article>
+        <button>HELLO!</button>
+        <div class="box"></div>
+        <ul>
+            <li>
+                <button class="redbtn">빨강</button>
+            </li>
+            <li>
+                <button class="yellowbtn">노랑</button>
+            </li>
+            <li>
+                <button class="greenbtn">초록</button>
+            </li>
+        </ul>
+        <script>
+            // console.log(document.getElementById("mydiv"));
+            // console.log(document.getElementsByTagName("div"));
+            console.log(document.getElementsByClassName("item-second"));
+            console.log(document.getElementsByClassName("item-second")[0]);
+            console.log(document.getElementsByClassName("item-second")[1]);
+            console.log(document.getElementsByTagName("li")[0]);
+
+            // const myBtn = document.querySelector("button");
+
+            // myBtn.addEventListener("click", function () {
+            //     // blue 라는 클래스의 속성 값을 지정 할 수 있습니다.
+            //     myBtn.classList.add("blue");
+
+            //     // myBtn.classList.remove(“blue”);     클래스를 제거합니다.
+            //     // myBtn.classList.toggle(“blue”);     클래스를 토글합니다. 없으면 넣어주고, 있으면 제거합니다.
+            //     // myBtn.classList.contains(“blue”);   해당하는 클래스가 있는지 확인합니다.
+            // });
+            const Box = document.querySelector(".box");
+            const btnRed = document.querySelector(".redbtn");
+            const btnYellow = document.querySelector(".yellowbtn");
+            const btnGreen = document.querySelector(".greenbtn");
+            const btnArr = [btnRed, btnYellow, btnGreen];
+
+            btnArr.forEach(function (item) {
+                item.addEventListener("click", function () {
+                    Box.classList.remove("red", "yellow", "green");
+                    if (item.classList.contains("redbtn")) {
+                        Box.classList.add("red");
+                    } else if (item.classList.contains("yellowbtn")) {
+                        Box.classList.add("yellow");
+                    } else if (item.classList.contains("greenbtn")) {
+                        Box.classList.add("green");
+                    } else {
+                    }
+                });
+            });
+            // btnRed.addEventListener("click", function () {
+            //     Box.classList.remove("yellow", "green");
+            //     Box.classList.add("red");
+            // });
+            // btnYellow.addEventListener("click", function () {
+            //     Box.classList.remove("red", "green");
+            //     Box.classList.add("yellow");
+            // });
+            // btnGreen.addEventListener("click", function () {
+            //     Box.classList.remove("yellow", "red");
+            //     Box.classList.add("green");
+            // });
+        </script>
+    </body>
+</html>
