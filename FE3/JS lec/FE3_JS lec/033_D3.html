@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title></title>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+            :root {
+                --main-font: "Pacifico", cursive;
+            }
+
+            text {
+                font-family: var(--main-font);
+            }
+
+            svg {
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <svg width="500px" height="500px">
+            <g>
+                <circle cy="150" cx="150" r="30"></circle>
+                <circle cy="15" cx="15" r="30"></circle>
+                <rect x="200" y="50" width="100" height="100"></rect>
+                <path d="M 100,200 100,300 150,300"></path>
+            </g>
+            <text x="100" y="100">hello world</text>
+        </svg>
+        <div class="canvas"></div>
+        <script>
+            const canvas = d3.select(".canvas");
+            const svg = canvas
+                .append("svg")
+                .attr("width", 1000)
+                .attr("height", 1000);
+            // svg.append("circle").attr("cx", 100).attr("cy", 100).attr("r", 100);
+            svg.append("text").attr("cx", 100).attr("cy", 100).attr("r", 100);
+
+            const color = ["red", "green", "blue", "pink", "black"];
+            for (let i = 0; i < 6; i++) {
+                svg.append("circle")
+                    .attr("cx", 100 * i)
+                    .attr("cy", 100 * i)
+                    .attr("r", (30 * i) / 2)
+                    .attr("fill", color[i - 1]);
+            }
+
+            svg.append("circle")
+                .attr("cx", 100)
+                .attr("cy", 100)
+                .attr("r", 30)
+                .attr("fill", "#999999");
+            svg.append("rect")
+                .attr("x", 100)
+                .attr("y", 300)
+                .attr("width", 30)
+                .attr("height", 30)
+                .attr("fill", "#464646");
+
+            svg.append("text")
+                .attr("x", 300)
+                .attr("y", 100)
+                .text("hello d3")
+                .style("font-size", "32px")
+                .style("font-weight", "bold");
+            svg.append("line")
+                .attr("x1", 200)
+                .attr("y1", 200)
+                .attr("x2", 300)
+                .attr("y2", 300)
+                .attr("stroke", "red");
+        </script>
+    </body>
+</html>
