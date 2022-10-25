@@ -40,31 +40,46 @@
                 <button type="button" class="list-right">></button>
             </div>
         </article>
-        <form name="educationList">
-            <ul>
-                <li>
-                    <label><input type="checkbox" />프론트엔드 스쿨</label>
-                </li>
-                <li>
-                    <label
-                        ><input type="checkbox" />백엔드 스쿨<input
-                            type="checkbox"
-                        />스쿨</label
-                    >
-                </li>
-                <li>
-                    <label><input type="checkbox" />앱 스쿨</label>
-                </li>
-            </ul>
-        </form>
         <script>
-            // const listBtn = document.querySelector(".list-btn");
-            // const listDigimon = document.querySelector(".list-digimon");
-            // const rightBtn = document.querySelector(".list-right");
-            // rightBtn.addEventListener("click", function () {
-            //     listDigimon.style.transform =
-            //         "translate(-50%, -50%) rotateY(calc(360deg/7))";
-            // });
+            const listBtn = document.querySelector(".list-btn");
+            const listDigimon = document.querySelector(".list-digimon");
+            const rightBtn = document.querySelector(".list-right");
+            const Btn = document.querySelector("button");
+            let cnt = 1;
+
+            rightBtn.addEventListener("click", function () {
+                listDigimon.classList.add("turn");
+                if (cnt === 1) {
+                    listDigimon.style.transform =
+                        "translate(-50%, -50%) rotateY(calc(360deg/7))";
+                    cnt++;
+                } else if (cnt === 2) {
+                    listDigimon.style.transform =
+                        "translate(-50%, -50%) rotateY(calc(360deg/7*2))";
+                    cnt++;
+                } else if (cnt === 3) {
+                    listDigimon.style.transform =
+                        "translate(-50%, -50%) rotateY(calc(360deg/7*3))";
+                    cnt++;
+                } else if (cnt === 4) {
+                    listDigimon.style.transform =
+                        "translate(-50%, -50%) rotateY(calc(360deg/7*4))";
+                    cnt++;
+                } else if (cnt === 5) {
+                    listDigimon.style.transform =
+                        "translate(-50%, -50%) rotateY(calc(360deg/7*5))";
+                    cnt++;
+                } else if (cnt === 6) {
+                    listDigimon.style.transform =
+                        "translate(-50%, -50%) rotateY(calc(360deg/7*6))";
+                    cnt++;
+                } else if (cnt === 7) {
+                    listDigimon.style.transform =
+                        "translate(-50%, -50%) rotateY(calc(360deg/7*7))";
+                    cnt = 1;
+                }
+                console.log(cnt);
+            });
         </script>
     </body>
 </html>

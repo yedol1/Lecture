@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+#main {
+    width: 460px;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #ab47bc;
+}
+#main fieldset {
+    border: none;
+}
+#main legend {
+    font-size: 1.3em;
+    text-align: center;
+}
+#main label {
+    display: block;
+}
+#main input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 2px 0 16px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+#main input:valid {
+    background-color: #c7a4ff;
+}
+#main button {
+    float: right;
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #fbc0e6;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#main progress {
+    width: 100%;
+}
