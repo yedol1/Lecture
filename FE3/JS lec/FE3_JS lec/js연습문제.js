@@ -38,3 +38,29 @@ for (let i = 0; i < str2.length; i++) {
 }
 console.log(sum2);
 //4번
+// 등비 등차
+function solution(common) {
+    var answer = 0;
+    let gapList = [];
+
+    for (let i = 1; i < common.length; i++) {
+        gapList[i - 1] = common[i] - common[i - 1];
+    }
+    const gap = new Set(gapList);
+
+    if (gap.size === 1 && common.length > 2) {
+        answer = common.pop() + gapList[0];
+    } else {
+        const check = [];
+        for (let i = 1; i < common.length; i++) {
+            check[i - 1] = common[i] / common[i - 1];
+        }
+        const gapcheck = new Set(check);
+        if (gapcheck.size === 1 && common.length > 2) {
+            answer = common.pop() * check[0];
+        } else {
+            console.log("ERROR!!!");
+        }
+    }
+    return answer;
+}
