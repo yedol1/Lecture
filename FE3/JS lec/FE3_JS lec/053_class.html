@@ -23,19 +23,47 @@
             //     }
             // }
 
-            class picker {
-                constructor(list) {
-                    this.foodList = list;
-                }
+            // class picker {
+            //     constructor(list) {
+            //         this.foodList = list;
+            //     }
 
-                choice() {
+            //     choice() {
+            //         console.log(
+            //             this.foodList[
+            //                 Math.floor(Math.random() * this.foodList.length)
+            //             ]
+            //         );
+            //     }
+            // }
+
+            class sausage {
+                constructor(taste1, taste2) {
+                    this.taste1 = taste1;
+                    this.taste2 = taste2;
+                }
+                taste() {
                     console.log(
-                        this.foodList[
-                            Math.floor(Math.random() * this.foodList.length)
-                        ]
+                        `${this.taste1}맛 와(과) ${this.taste2}맛 이 난다`
                     );
                 }
             }
+            const sausage1 = new sausage("옥수수", "돼지고기");
+            sausage1.taste();
+
+            class sausagePlus extends sausage {
+                constructor(taste1, taste2, taste3) {
+                    super(taste1, taste2);
+                    this.taste3 = taste3;
+                }
+                getNew() {
+                    super.taste();
+                    console.log(`${this.taste3}맛 도 추가로 난다`);
+                }
+            }
+
+            const newSausage = new sausagePlus("옥수수", "돼지고기", "불");
+            newSausage.getNew();
         </script>
     </body>
 </html>
