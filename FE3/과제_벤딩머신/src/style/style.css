@@ -1,10 +1,10 @@
-body{
-    background-color: #EAE8FE;
+body {
+    background-color: #eae8fe;
 }
-button{
+button {
     cursor: pointer;
 }
-#wrapper{
+#wrapper {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -15,37 +15,37 @@ button{
 }
 
 /* 로고 */
-.head{
+.head {
     position: absolute;
     width: max-content;
     top: 0;
 }
 
-.head img{
+.head img {
     width: 386px;
     height: 180px;
 }
 
-.cont-vend,.gotcha{
+.cont-vend,
+.gotcha {
     width: 360px;
     height: fit-content;
 }
 
-
 /* 자판기UI */
-.cont-vend{
+.cont-vend {
     position: relative;
     background-color: #fff;
     height: fit-content;
     padding: 31px 27px 28px 27px;
     box-sizing: border-box;
 }
-.gotcha{
-    background-color: #EAE8FE;
+.gotcha {
+    background-color: #eae8fe;
 }
 
 /* 콜라 리스트 */
-.list-item{
+.list-item {
     display: flex;
     /* flex-direction: row; */
     flex-wrap: wrap;
@@ -53,7 +53,7 @@ button{
     gap: 12px;
 }
 
-.list-item li{
+.list-item li {
     position: relative;
     width: 94px;
     height: 130px;
@@ -66,39 +66,39 @@ button{
     font-weight: 500;
     z-index: 1;
 }
-.list-btn:hover{
+.list-btn:hover {
     /* display: block; */
     position: absolute;
-    content:'';
-    width:100%;
-    height:100%;
-    outline: 3px solid #6327FE;
+    content: "";
+    width: 100%;
+    height: 100%;
+    outline: 3px solid #6327fe;
     border-radius: 10px;
     box-sizing: border-box;
 }
-.sold-out:hover{
+.sold-out:hover {
     position: absolute;
-    content:'';
-    width:100%;
-    height:100%;
+    content: "";
+    width: 100%;
+    height: 100%;
     border: transparent;
     border-radius: 10px;
     box-sizing: border-box;
 }
-.list-item .sold-out::before{
+.list-item .sold-out::before {
     display: block;
     position: absolute;
-    content: '';
+    content: "";
     width: 100%;
     height: 100%;
     border-radius: 10px;
     box-sizing: border-box;
-    background-image: url(/과제_벤딩머신/src/images/Sold-out.svg);
+    background-image: url(/Lecture/FE3/과제_벤딩머신/src/images/Sold-out.svg);
     background-color: rgba(0, 0, 0, 0.8);
     background-repeat: no-repeat;
     background-position: center;
 }
-.list-btn{
+.list-btn {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -107,20 +107,20 @@ button{
     width: 100%;
 }
 
-.item-name{
+.item-name {
     display: block;
     padding-top: 6px;
     font-size: 9px;
     line-height: 13px;
 }
-.item-price{
+.item-price {
     display: block;
     width: 70px;
     height: 22px;
     margin-top: 6px;
     padding: 6px 16px;
     border-radius: 50px;
-    background: #6327FE;
+    background: #6327fe;
     color: #fff;
     font-size: 12px;
     line-height: 100%;
@@ -128,14 +128,16 @@ button{
 }
 
 /* 잔액 & 입급 & 획득*/
-.vend-rest, .vent-input, .vend-order{
+.vend-rest,
+.vent-input,
+.vend-order {
     display: flex;
     width: 100%;
     /* height: 100%; */
     justify-content: space-between;
     margin-top: 12px;
 }
-.gotcha .vend-order{
+.gotcha .vend-order {
     justify-content: flex-start;
 }
 /* .vend-order{
@@ -143,72 +145,75 @@ button{
     width: 100%;
     margin-top: 12px;
 } */
-.gotcha .vend-order{
+.gotcha .vend-order {
     flex-direction: column;
     align-items: center;
     height: 475px;
     padding: 25px 27px 26px 27px;
     box-sizing: border-box;
 }
-.gotcha{
+.gotcha {
     /* display: block; */
     /* position: relative; */
     height: 100%;
 }
 
-.cont-pocket{
+.cont-pocket {
     background-color: #fff;
     padding: 9px 0;
 }
-.rest-money, .input-money, .order-list, .pocket-money{
+.rest-money,
+.input-money,
+.order-list,
+.pocket-money {
     display: flex;
     justify-content: space-between;
     width: 66%;
     padding: 6px 10px;
     border-radius: 5px;
-    background: #EAE8FE;
+    background: #eae8fe;
     box-sizing: border-box;
     font-weight: 500;
     font-size: 14px;
     line-height: 20px;
 }
-.input-money{
-    border: 1px solid #BDBDBD;
+.input-money {
+    border: 1px solid #bdbdbd;
     background-color: transparent;
     font-size: 13px;
     line-height: 19px;
 }
-.input-money::placeholder{
-    color: #BDBDBD;
+.input-money::placeholder {
+    color: #bdbdbd;
 }
-.order-list{
+.order-list {
     height: 106px;
     flex-direction: column;
     justify-content: flex-start;
     overflow-y: scroll;
-    border: 1px solid #BDBDBD;
+    border: 1px solid #bdbdbd;
     padding: 12px 4px 12px 12px;
     box-sizing: border-box;
 }
-.pocket-money{
+.pocket-money {
     width: auto;
     margin: 0px 27px;
 }
 /* 스크롤 커스텀 */
-.order-list::-webkit-scrollbar{
+.order-list::-webkit-scrollbar {
     width: 12px;
 }
-.order-list::-webkit-scrollbar-thumb{
+.order-list::-webkit-scrollbar-thumb {
     background-color: #fff;
     background-clip: padding-box;
     border: 4px solid transparent;
     border-radius: 50px;
 }
-.order-list::-webkit-scrollbar-track{
-    background-color: rgba(0,0,0,0);
+.order-list::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0);
 }
 
-.order-list li{
+.order-list li {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -220,34 +225,34 @@ button{
     border-radius: 5px;
     box-sizing: border-box;
 }
-.order-list li img{
+.order-list li img {
     width: 18px;
     height: 33px;
 }
-.list-qnt{
+.list-qnt {
     display: flex;
-    float:right;
-    width:30px;
-    height:30px;
-    border: 1px solid #BDBDBD;
+    float: right;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #bdbdbd;
     box-sizing: border-box;
     border-radius: 5px;
     justify-content: center;
     align-items: center;
     /* vertical-align: text-bottom; */
 }
-.list-name{
+.list-name {
     width: 49%;
     font-weight: 500;
     font-size: 9px;
     line-height: 13px;
 }
-.order-tit{
+.order-tit {
     font-weight: 700;
     font-size: 14px;
     line-height: 20px;
 }
-.gotcha-total{
+.gotcha-total {
     width: 100%;
     text-align: right;
     font-weight: 500;
@@ -255,7 +260,9 @@ button{
     line-height: 17px;
     margin-top: 6px;
 }
-.return-money, .input-deposit, .list-get{
+.return-money,
+.input-deposit,
+.list-get {
     width: 31%;
     padding: 6px 10px;
     border-radius: 5px;
@@ -265,71 +272,68 @@ button{
     font-size: 13px;
     line-height: 19px;
 }
-.list-get{
-    background-color: #6327FE;
+.list-get {
+    background-color: #6327fe;
     color: #fff;
     font-weight: 700;
     font-size: 13px;
     line-height: 19px;
 }
 
-.mt-20{
+.mt-20 {
     margin-top: 20px;
     background: #fff;
 }
-.mt-12{
+.mt-12 {
     margin-top: 12px;
 }
-.per-100{
+.per-100 {
     width: 100%;
     height: 364px;
 }
 
-
-@media only screen and (min-width:360px) and (max-width: 747px) {
-    body{
+@media only screen and (min-width: 360px) and (max-width: 747px) {
+    body {
         background-color: #fff;
-
     }
-    #wrapper{
+    #wrapper {
         padding-top: 78px;
     }
-    .head img{
+    .head img {
         width: 166px;
         height: 78px;
     }
-    .gotcha .vend-order{
+    .gotcha .vend-order {
         margin-top: 0px;
     }
-    .cont-pocket{
+    .cont-pocket {
         padding: 0px;
     }
-    .cont-vend{
+    .cont-vend {
         padding: 18px 27px 20px 27px;
     }
 }
-@media only screen and (max-width:360px){
-    html{
+@media only screen and (max-width: 360px) {
+    html {
         width: 360px;
     }
-    body{
+    body {
         background-color: #fff;
-
     }
-    #wrapper{
+    #wrapper {
         padding-top: 78px;
     }
-    .head img{
+    .head img {
         width: 166px;
         height: 78px;
     }
-    .gotcha .vend-order{
+    .gotcha .vend-order {
         margin-top: 0px;
     }
-    .cont-pocket{
+    .cont-pocket {
         padding: 0px;
     }
-    .cont-vend{
+    .cont-vend {
         padding: 18px 27px 20px 27px;
     }
 }
