@@ -1,20 +1,21 @@
-import { useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 
-export default function App() {
-    const searchValue = useRef(null);
+function getName() {
+    console.log("사실은 겁나 오래기다리는중...");
+    return "개리";
+}
 
-    const handleSearch = (e) => {
-        console.log("클릭했어요!");
-        console.log(searchValue.current.value);
-    };
-
+function App() {
+    const [name, setName] = useState(getName);
+    const [num, setNum] = useState(0);
     return (
-        <div>
-            <label>
-                검색어를 입력하세요 :
-                <input type="text" ref={searchValue} />
-            </label>
-            <button onClick={handleSearch}>검색</button>
-        </div>
+        <>
+            <div>
+                안녕하세요 {name}! 현재 숫자는{num}입니다
+            </div>
+            <button onClick={() => setNum((prevNum) => prevNum + 1)}>{num}</button>
+        </>
     );
 }
+
+export default App;
