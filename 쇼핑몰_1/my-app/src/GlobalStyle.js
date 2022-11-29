@@ -3,16 +3,17 @@ import { reset } from "styled-reset";
 
 export const GlobalStyle = createGlobalStyle`
 ${reset}
+
 html,body{
-    font-family: "SpoqaHanSans", sans-serif;
-    font-weight: 400;
+  font-family: "SpoqaHanSans", sans-serif;
+  font-weight: 400;
 }
 
 button{
-    padding: 0;
-    margin: 0;
-    background: none;
-    border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  border: none;
 }
 
 .hidden {

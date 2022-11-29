@@ -1,20 +1,24 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Routes } from "react-router-dom";
+import { Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import CreditPage from "./pages/CreditPage/CreditPage";
 import HomePage from "./pages/HomePage/HomePage";
-import NotFoundPage from "./pages/NotFound/NotFoundPage";
-import ProductDetailPage from "./pages/ProductDetailPage/ProductDetailPage";
+import NotFound from "./pages/NotFound/styled";
+import ProductPage from "./pages/ProductPage/ProductPage";
 
 function App() {
-  return (
-    <>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/product/:id" element={<ProductDetailPage/>} />
-          <Route path="*" element={<NotFoundPage />} />
-        </Routes>
-      </BrowserRouter>
-    </>
-  );
+    return (
+        <>
+            <BrowserRouter basename={process.env.PUBLIC_URL}>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/credit" element={<CreditPage />} />
+                    <Route path="/product/:id" element={<ProductPage />} />
+                    <Route path="*" element={<NotFound />} />
+                </Routes>
+            </BrowserRouter>
+        </>
+    );
 }
 
 export default App;

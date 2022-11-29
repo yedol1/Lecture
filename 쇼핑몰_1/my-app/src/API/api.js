@@ -7,20 +7,10 @@ const instance = axios.create({
 });
 
 export const getProductData = async () => {
-  try{
-    const response = await instance.get('mall')
-    return response.data
-  } catch(error){
-    console.log(error);
-  }
-};
-
-
-export const PostCartData = async () => {
-  try{
-    const response = await instance.post('mall')
-    return response.data
-  } catch(error){
+  try {
+    const response = await instance.get("mall");
+    return response.data;
+  } catch (error) {
     console.log(error);
   }
 };
