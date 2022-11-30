@@ -18,7 +18,13 @@ const ProductDetail = ({ locationData }) => {
         }
     }, []);
     const copyData = { ...data };
+    const productId = copyData.id;
     const discountPrice = (copyData.price * (100 - copyData.discountRate)) / 100;
+    const arrayData = [];
+    const [CartList, setCartList] = useState([]);
+    const add = () => {
+        setCartList(CartList.push(productId));
+    };
     const onClickCountHandler = (type) => {
         if (type === "increment") {
             if (data.stockCount > count) {
@@ -30,7 +36,15 @@ const ProductDetail = ({ locationData }) => {
             }
         }
     };
-    let test = 10;
+    const onClickPageHandler = () => {
+        add();
+        navigate("/credit", {
+            state: {
+                cartListId: { CartList },
+                productCount: { count },
+            },
+        });
+    };
     return (
         <ProductDetailWrapper>
             <h2 className="hidden">상품 가격 및 정보</h2>
@@ -62,19 +76,9 @@ const ProductDetail = ({ locationData }) => {
                         </li>
                         <li className="product-btn-box">
                             <button className="buy-btn">바로 구매</button>
-                            <Link
-                                to={{
-                                    pathname: "/credit",
-                                }}
-                                state={{
-                                    제품정보: { data },
-                                    갯수: { count },
-                                }}
-                            >
-                                <button className="cart-btn">
-                                    <img src={cartImg} alt="장바구니" />
-                                </button>
-                            </Link>
+                            <button onClick={onClickPageHandler} className="cart-btn">
+                                <img src={cartImg} alt="장바구니" />
+                            </button>
                             <button
                                 className="like-btn"
                                 onClick={() => {
