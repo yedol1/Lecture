@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ProductDetailWrapper } from "./styled";
+import { useDispatch } from "react-redux";
+import { addList } from "../../../store/modules/addShoppingList";
 import cartImg from "../../../assets/images/icon-shopping-cart.svg";
 import heartImg from "../../../assets/images/icon-heart.svg";
 import heartOnImg from "../../../assets/images/icon-heart-on.svg";
@@ -10,6 +12,7 @@ const ProductDetail = ({ locationData }) => {
     const [count, setCount] = useState(1);
     const [isLike, setIsLike] = useState(false);
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     useEffect(() => {
         if (locationData) {
             setData(() => {
@@ -18,13 +21,7 @@ const ProductDetail = ({ locationData }) => {
         }
     }, []);
     const copyData = { ...data };
-    const productId = copyData.id;
     const discountPrice = (copyData.price * (100 - copyData.discountRate)) / 100;
-    const arrayData = [];
-    const [CartList, setCartList] = useState([]);
-    const add = () => {
-        setCartList(CartList.push(productId));
-    };
     const onClickCountHandler = (type) => {
         if (type === "increment") {
             if (data.stockCount > count) {
@@ -37,13 +34,8 @@ const ProductDetail = ({ locationData }) => {
         }
     };
     const onClickPageHandler = () => {
-        add();
-        navigate("/credit", {
-            state: {
-                cartListId: { CartList },
-                productCount: { count },
-            },
-        });
+        dispatch(addList([...[locationData], count]));
+        navigate("/credit");
     };
     return (
         <ProductDetailWrapper>
