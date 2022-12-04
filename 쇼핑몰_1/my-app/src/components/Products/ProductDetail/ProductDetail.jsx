@@ -34,7 +34,7 @@ const ProductDetail = ({ locationData }) => {
         }
     };
     const onClickPageHandler = () => {
-        dispatch(addList([...[locationData], count]));
+        dispatch(addList([...[locationData.state.data], count]));
         navigate("/credit");
     };
     return (
